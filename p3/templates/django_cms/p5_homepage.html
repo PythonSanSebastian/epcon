@@ -115,26 +115,54 @@
     <section class="discover-europython">
         <div class="grid-container">
             <div class="grid-100">
-                <h2 class="border-title">{% trans "Discover EuroPython" %}</h2>
+                <h2 class="border-title">{% trans "Discover Python San Sebastian" %}</h2>
             </div>
+
+
             <div class="grid-33">
-                <a href="#">
+                <a href="/keynotes">
                     <div class="learn-icon">
-                        <img src="{% static 'p6/images/talk.svg' %}">
+                        <!-- <img src="{% static 'p6/images/eventi_sociali.svg' %}" /> -->
+                        <img src="{% static 'p6/images/pyss15_keynote.svg' %}" />
+                    </div>
+                    <h4>{% trans "Keynoters" %}</h4>
+                    <p>{% trans "International keynoters in each days" %}
+                </a>
+            </div>
+
+            <div class="grid-33">
+                <a href="/p3/schedule/pyss15">
+                    <div class="learn-icon">
+                        <!-- <img src="{% static 'p6/images/talk.svg' %}">-->
+                        <img src="{% static 'p6/images/pyss15_talk.svg' %}">
                     </div>
                     <h4>{% trans "Talk" %}</h4>
-                    <p>{% trans "Enjoy 5 parallel tracks, over 100 talks, plenty of hallway sessions" %}
+                    <p>{% trans "A unique track with over 10 talks" %}
                 </a>
             </div>
             <div class="grid-33">
-                <a href="#">
+                <a href="/p3/schedule/pyss15">
                     <div class="learn-icon">
-                        <img src="{% static 'p6/images/training.svg' %}" />
+                        <!-- <img src="{% static 'p6/images/training.svg' %}" /> -->
+                        <img src="{% static 'p6/images/pyss15_training.svg' %}" />
                     </div>
                     <h4>{% trans "Training" %}</h4>
                     <p>{% trans "Professional trainers to teach you Python and how to use it effectively" %}
                 </a>
             </div>
+
+            <div class="grid-33">
+                <a href="/find-out-whos-coming">
+                    <div class="learn-icon">
+                        <!-- <img src="{% static 'p6/images/scopri_chi_viene.svg' %}" />-->
+                        <img src="{% static 'p6/images/pyss15_who_comming.svg' %}" />
+                    </div>
+                    <h4>{% trans "Who's coming" %}</h4>
+                    <p>{% trans "Check the public profiles and arrange meetings" %}
+                </a>
+            </div>
+
+            <!--
             <div class="grid-33">
                 <a href="#">
                     <div class="learn-icon">
@@ -144,17 +172,20 @@
                     <p>{% trans "Get help for solving your problems directly from the experts" %}
                 </a>
             </div>
-
+            -->
 
             <div class="grid-33">
-                <a href="/find-out-whos-coming">
+                <a href="#">
                     <div class="learn-icon">
-                        <img src="{% static 'p6/images/scopri_chi_viene.svg' %}" />
+                        <!-- <img src="{% static 'p6/images/helpdesk.svg' %}" /> -->
+                        <img src="{% static 'p6/images/pyss15_surprise.svg' %}" />
                     </div>
-                    <h4>{% trans "Who's coming" %}</h4>
-                    <p>{% trans "Check the public profiles and arrange meetings" %}
+                    <h4>{% trans "Surprises" %}</h4>
+                    <p>{% trans "We are trying to make Python San Sebastian more than a conference! Stay tuned for news" %}
                 </a>
             </div>
+
+            <!--
             <div class="grid-33">
                 <a href="#">
                     <div class="learn-icon">
@@ -164,13 +195,16 @@
                     <p>{% trans "Find excellent Python jobs" %}
                 </a>
             </div>
+            -->
+
             <div class="grid-33">
-                <a href="#">
+                <a href="/social-events">
                     <div class="learn-icon">
-                        <img src="{% static 'p6/images/eventi_sociali.svg' %}" />
+                        <!-- <img src="{% static 'p6/images/eventi_sociali.svg' %}" /> -->
+                        <img src="{% static 'p6/images/pyss15_social.svg' %}" />
                     </div>
                     <h4>{% trans "Social Events" %}</h4>
-                    <p>{% trans "Enjoy lounge events, dinners, boat trips, etc." %}
+                    <p>{% trans "Our famous social events are not going to miss the conference, including the cider house" %}
                 </a>
             </div>
         </div>

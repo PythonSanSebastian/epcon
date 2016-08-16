@@ -795,7 +795,7 @@ def CONFERENCE_VIDEO_COVER_IMAGE(eid, type='front', thumb=False):
             lines[ix] = line
         return lines
 
-    if conference in ('ep2012', 'ep2013', 'ep2015', 'ep2016', 'pyss16'):
+    if conference in ('ep2012', 'ep2013', 'ep2015', 'ep2016', 'pyss15', 'pyss16'):
         master = Image.open(os.path.join(stuff, 'cover-start-end.png')).convert(
             'RGBA')
 
@@ -810,7 +810,7 @@ def CONFERENCE_VIDEO_COVER_IMAGE(eid, type='front', thumb=False):
                 os.path.join(stuff, 'Arial_Unicode.ttf'),
                 21, encoding="unic")
             y = 175
-        elif conference in ('ep2013', 'ep2015', 'ep2016', 'pyss16'):
+        elif conference in ('ep2013', 'ep2015', 'ep2016', 'pyss15', 'pyss16'):
             ftitle = ImageFont.truetype(
                 os.path.join(stuff, 'League_Gothic.otf'),
                 36, encoding="unic")
