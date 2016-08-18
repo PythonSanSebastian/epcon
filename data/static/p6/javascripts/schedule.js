@@ -476,15 +476,14 @@ function highlighter(mode, option) {
                 e.attr('data-raw-seats', data.seats);
                 e.attr('data-raw-expected', data.expected);
 
-                // MAL 2016-04-16: disabled for now
-                if(0 && data.overbook) {
+                if(data.overbook) {
                     var track = e.parents('.track').attr('data-track');
                     if(track != 'helpdesk1' && track != 'helpdesk2'
                         && track != 'training1' && track != 'training2'
                         && !e.hasClass('keynote')) {
                         e.addClass('overbooked');
                         e.append('<div class="warning overbook">'
-                            +'<img src="' + STATIC_URL + 'p6/images/warning.png" title="our estimate of attendance exceeds the room size" />'
+                            +'<img src="' + STATIC_URL + 'p5/i/warning.png" title="our estimate of attendance exceeds the room size" />'
                             +'</div>');
                     }
                 }
