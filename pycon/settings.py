@@ -88,6 +88,10 @@ EMAIL_HOST_USER = "noreply@pyss.org"
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 
+# Email sender address used per default for emails to e.g. attendees
+DEFAULT_FROM_EMAIL = 'noreply@pyss.org'
+
+
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
@@ -899,9 +903,9 @@ ASSOPY_VIES_WSDL_URL = None
 ASSOPY_BACKEND = 'https://assopy.europython.eu/conference/externalcall'
 ASSOPY_SEARCH_MISSING_USERS_ON_BACKEND = False
 ASSOPY_TICKET_PAGE = 'p3-tickets'
-ASSOPY_SEND_EMAIL_TO = ['']
+ASSOPY_SEND_EMAIL_TO = ['noreply@pyss.org']
 ASSOPY_REFUND_EMAIL_ADDRESS = {
-    'approve': ['info@europython.eu'],
+    'approve': ['noreply@pyss.org'],
     'execute': {
         None: ['dvd@gnx.it'],
         'bank': ['matteo@europython.eu'],
