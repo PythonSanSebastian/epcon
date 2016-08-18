@@ -899,7 +899,7 @@ ASSOPY_VIES_WSDL_URL = None
 ASSOPY_BACKEND = 'https://assopy.europython.eu/conference/externalcall'
 ASSOPY_SEARCH_MISSING_USERS_ON_BACKEND = False
 ASSOPY_TICKET_PAGE = 'p3-tickets'
-ASSOPY_SEND_EMAIL_TO = ['billing-log@europython.io']
+ASSOPY_SEND_EMAIL_TO = ['']
 ASSOPY_REFUND_EMAIL_ADDRESS = {
     'approve': ['info@europython.eu'],
     'execute': {
