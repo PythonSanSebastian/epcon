@@ -178,3 +178,8 @@ def _ORDERITEM_CAN_BE_REFUNDED(user, item):
     return False
 
 ORDERITEM_CAN_BE_REFUNDED = getattr(settings, 'ASSOPY_ORDERITEM_CAN_BE_REFUNDED', _ORDERITEM_CAN_BE_REFUNDED)
+
+
+#TESTING...
+
+DEFAULT_FROM_EMAIL = 'noreply@pyss.org'
