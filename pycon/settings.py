@@ -19,13 +19,13 @@ TEMPLATE_DEBUG = DEBUG
 ALLOWED_HOSTS = ['*']
 
 ADMINS = (
-    ('alexsavio', 'alexsavio@gmail.com'),
+#    ('alexsavio', 'alexsavio@gmail.com'),
     ('oiertwo'  , 'badtrex@gmail.com'),
 #    ('fpliger'  , 'fabio.pliger@gmail.com'),
 #    ('barrachri', 'barrachri@gmail.com'),
 #    ('malemburg', 'mal@europython.eu'),
 #    ('web-wg', 'web-wg@europython.eu'),
-    ('acpyss', 'info@pyss.org'),
+#    ('acpyss', 'info@pyss.org'),
 )
 
 MANAGERS = ADMINS
@@ -34,6 +34,7 @@ MANAGERS = ADMINS
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", '').split(',')
 #APPEND_SLASH = False
 #ALLOWED_HOSTS = ['pyss16.pyss.org']
+
 
 PROJECT_DIR = os.environ.get('PROJECT_DIR', os.path.normpath(
     os.path.join(os.path.dirname(__file__), '..')))
@@ -114,7 +115,7 @@ LANGUAGES = (
     ('en', _('English')),
     ('es', _('Spanish')),
     ('eu', _('Basque')),
-    ('it', _('Italian')),
+ #   ('it', _('Italian')),
 )
 
 # These languages are shown in the talk submission forms. The

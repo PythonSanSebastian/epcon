@@ -87,8 +87,8 @@ class P3SubmissionForm(P3TalkFormMixin, cforms.SubmissionForm):
         help_text=_('If the talk is accepted, speakers are encouraged to upload their talk slides to make them available to users of this web site.'),
     )
     video_agreement = forms.BooleanField(
-        label=_('I agree to have my presentation recorded and have read, understood and agree to the <a href="/speaker-release-agreement/">EuroPython Speaker Release Agreement</a>'),
-        help_text=_('We will be recording the conference talks and publish them on the EuroPython YouTube channel and archive.org.'),
+        label=_('I agree to have my presentation recorded and have read, understood and agree to the <a href="/speaker-release-agreement/">PySS Speaker Release Agreement</a>'),
+        help_text=_('PySS is not recorded and published. We need your permission in case we want to record and publish something.'),
     )
 
 

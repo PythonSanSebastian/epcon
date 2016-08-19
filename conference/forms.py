@@ -256,7 +256,7 @@ class SubmissionForm(forms.Form):
         label=_('Compact biography'),
         help_text=_('Please enter a short biography (one or two paragraphs) <br />Do not paste your CV!'),
         widget=forms.Textarea())
-
+    '''
     #Talk details OLD VERSION (FOR PYSS)
     title = forms.CharField(label=_('Talk title'), max_length=100, widget=forms.TextInput(attrs={'size': 40}))
     type = forms.TypedChoiceField(
@@ -265,18 +265,18 @@ class SubmissionForm(forms.Form):
         choices=models.TALK_TYPE,
         initial='s',
         required=True, )
-    duration = forms.TypedChoiceField(
-        label=_('Suggested duration'),
-        help_text=_('This is the <b>net duration</b> of the talk, excluding Q&A'),
-        choices=models.TALK_DURATION,
-        coerce=int,
-        initial='30', )
+    #duration = forms.TypedChoiceField(
+    #    label=_('Suggested duration'),
+    #    help_text=_('This is the <b>net duration</b> of the talk, excluding Q&A'),
+    #    choices=models.TALK_DURATION,
+    #    coerce=int,
+    #    initial='30', )
     qa_duration = forms.IntegerField(
         label=_('Q&A duration'),
         initial='0',
         required=False, )
     language = forms.TypedChoiceField(
-        help_text=_('Select Italian only if you are not comfortable in speaking English.'),
+        help_text=_('Select Spanish or Basque only if you are not comfortable in speaking English.'),
         choices=models.TALK_LANGUAGES,
         initial='en', )
     level = forms.TypedChoiceField(label=_('Audience level'), choices=models.TALK_LEVEL, initial='beginner')
@@ -287,17 +287,18 @@ class SubmissionForm(forms.Form):
             '<p>Please enter a short description of the talk you are submitting. Be sure to includes the goals of your talk and any prerequisite required to fully understand it.</p><p>Suggested size: two or three paragraphs.</p>'),
         widget=forms.Textarea(), )
     tags = TagField(widget=TagWidget)
-
+    '''
     # Talk details NEW VERSION (FOR EP)
-    #title = TalkBaseForm.base_fields['title']
-    #sub_title = TalkBaseForm.base_fields['sub_title']
-    #abstract = TalkBaseForm.base_fields['abstract']
-    #abstract_short = TalkBaseForm.base_fields['abstract_short']
-    #prerequisites = TalkBaseForm.base_fields['prerequisites']
-    #language = TalkBaseForm.base_fields['language']
-    #level = TalkBaseForm.base_fields['level']
-    #tags = TalkBaseForm.base_fields['tags']
-    #abstract_extra = TalkBaseForm.base_fields['abstract_extra']
+    title = TalkBaseForm.base_fields['title']
+    sub_title = "" #TalkBaseForm.base_fields['sub_title']
+    abstract = TalkBaseForm.base_fields['abstract']
+    abstract_short = "" #TalkBaseForm.base_fields['abstract_short']
+    prerequisites = "" #TalkBaseForm.base_fields['prerequisites']
+    language = TalkBaseForm.base_fields['language']
+    level = TalkBaseForm.base_fields['level']
+    tags = TalkBaseForm.base_fields['tags']
+    abstract_extra = "" #TalkBaseForm.base_fields['abstract_extra']
+    
 
     def __init__(self, user, *args, **kwargs):
         try:
@@ -352,10 +353,17 @@ class SubmissionForm(forms.Form):
             speaker.save()
 
         talk = models.Talk.objects.createFromTitle(
-            title=data['title'], sub_title=data['sub_title'], prerequisites=data['prerequisites'],
-            abstract_short=data['abstract_short'], abstract_extra=data['abstract_extra'],conference=settings.CONFERENCE, speaker=speaker,
-            status='proposed', language=data['language'],
-            level=data['level'], type=data['type']
+            title=data['title'],
+            sub_title="", #data['sub_title'],
+            prerequisites="",#data['prerequisites'],
+            abstract_short="",#data['abstract_short'],
+            abstract_extra="",#data['abstract_extra'],
+            conference=settings.CONFERENCE,
+            speaker=speaker,
+            status='proposed',
+            language=data['language'],
+            level=data['level'],
+            type=data['type']
         )
 
         talk.save()

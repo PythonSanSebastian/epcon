@@ -571,11 +571,10 @@ TALK_TYPE = (
     ('t_45', 'Talk (45 mins)'),
     ('t_60', 'Talk (60 mins)'),
     ('i_60', 'Interactive (60 mins)'),
-    ('r_180', 'Training (180 mins)'),
-    ('p_180', 'Poster session (180 mins)'),
-    ('n_60', 'Panel (60 mins)'),
-    ('n_90', 'Panel (90 mins)'),
-    ('h_180', 'Help desk (180 mins)'),
+    ('r_60', 'Training (60 mins)'),
+    ('r_120', 'Training (120 mins)'),
+    ('p_180', 'Poster during coffe breaks (30x4 mins)'),
+    ('h_180', 'Help desk'),
 )
 
 # Mapping of TALK_TYPE to duration in minutes
@@ -583,12 +582,11 @@ TALK_DURATION = {
     't_30': 30,
     't_45': 45,
     't_60': 60,
-    'i_60': 60,
-    'r_180': 180,
-    'p_180': 180,
-    'n_60': 60,
-    'n_90': 90,
-    'h_180': 180,
+#    'i_60': 60,
+#    'r_60': 60,
+    'r_120': 120,
+#    'p_180': 30,
+#    'h_180': 180,
 }
 
 TALK_ADMIN_TYPE = (
@@ -651,6 +649,7 @@ class Talk(models.Model, UrlMixin):
     # durata totale del talk (include la sessione di Q&A)T
     duration = models.IntegerField(
         _('Duration'),
+        default=0,
         help_text=_('This is the duration of the talk'))
     # durata della sessione di Q&A
     # Questi sono i tag che lo speaker suggerisce per il proprio talk, li ho
