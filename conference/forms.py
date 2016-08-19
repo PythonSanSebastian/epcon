@@ -298,7 +298,7 @@ class SubmissionForm(forms.Form):
     level = TalkBaseForm.base_fields['level']
     tags = TalkBaseForm.base_fields['tags']
     abstract_extra = "" #TalkBaseForm.base_fields['abstract_extra']
-    
+
 
     def __init__(self, user, *args, **kwargs):
         try:
