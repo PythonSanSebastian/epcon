@@ -713,8 +713,8 @@ class P3FormTickets(aforms.FormTickets):
             if k.startswith('H'):
                 del self.fields[k]
 
-        self.fields['room_reservations'] = HotelReservationsField(types=('HR',), required=False)
-        self.fields['bed_reservations'] = HotelReservationsField(types=('HB',), required=False)
+        #self.fields['room_reservations'] = HotelReservationsField(types=('HR',), required=False)
+        #self.fields['bed_reservations'] = HotelReservationsField(types=('HB',), required=False)
 
     def clean_coupon(self):
         data = self.cleaned_data.get('coupon', '').strip()
