@@ -88,10 +88,11 @@ def _ASSOPY_NEXT_INVOICE_CODE(last_invoice_code, order):
     """
     import datetime
     if last_invoice_code:
-        invoice_number = int(last_invoice_code[5:])
+        invoice_number = int(last_invoice_code[12:])
     else:
         invoice_number = 0
     return "I_PYSS16/%s.%s" %  (str(datetime.date.today().year)[2:], str(invoice_number+1).zfill(4))
+
 
 NEXT_INVOICE_CODE = getattr(settings, 'ASSOPY_NEXT_INVOICE_CODE', _ASSOPY_NEXT_INVOICE_CODE)
 
