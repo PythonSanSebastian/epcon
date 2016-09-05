@@ -667,7 +667,7 @@ class Talk(models.Model, UrlMixin):
 
     def save(self, *args, **kwargs):
         # the duration is taken directly from talk's type
-        self.duration = 0 # TALK_DURATION[self.type]
+        self.duration = 30 #TALK_DURATION[self.type]
         super(Talk, self).save(*args, **kwargs)
 
     def __unicode__(self):
